@@ -3,7 +3,7 @@ name: Deploy 02_expressweb
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
