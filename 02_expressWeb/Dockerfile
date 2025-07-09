@@ -11,7 +11,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Expose the port the app runs on
+# Expose the port, the app runs on
 EXPOSE 3000
 
 # RUN the app
