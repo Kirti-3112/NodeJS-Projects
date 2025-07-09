@@ -40,6 +40,9 @@ jobs:
         username: devopskirtihub31
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    - name: Debug docker info
+      run: docker info
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
