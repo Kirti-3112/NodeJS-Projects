@@ -43,8 +43,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
-        file: ./Dockerfile
+        context: ./02_expressWeb
+        file: ./02_expressWeb/Dockerfile
         push: true
         tags: devopskirtihub31/expressweb:latest
 
