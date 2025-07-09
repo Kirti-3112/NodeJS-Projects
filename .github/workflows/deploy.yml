@@ -49,7 +49,7 @@ jobs:
         context: ./02_expressWeb
         file: ./02_expressWeb/Dockerfile
         push: true
-        tags: devopskirtihub31/expressweb:latest
+        tags: devopskirtihub31/expressweb:new
 
     - name: Show image pushed
       run: echo "✅ Image pushed:devopskirtihub31/expressweb:latest"
