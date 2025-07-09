@@ -37,7 +37,7 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
       with:
-        username: devopskirtihub31
+        username: abhishekkumar1402
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Debug docker info
@@ -49,8 +49,8 @@ jobs:
         context: ./02_expressWeb
         file: ./02_expressWeb/Dockerfile
         push: true
-        tags: devopskirtihub31/expressweb:new
+        tags: abhishekkumar1402/expressweb:new
 
     - name: Show image pushed
-      run: echo "✅ Image pushed:devopskirtihub31/expressweb:latest"
+      run: echo "✅ Image pushed:abhishekkumar1402/expressweb:new"
 
