@@ -48,7 +48,7 @@ pipeline {
                 echo 'Pushing Docker Image...'
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                   bat 'docker login -u %USERNAME% -p %PASSWORD%'
-                  bat 'docoker push %IMAGE_NAME%:%IMAGE_TAG%'
+                  bat 'docker push %IMAGE_NAME%:%IMAGE_TAG%'
                 }    
             }
         }
