@@ -17,7 +17,7 @@ pipeline {
             steps {
                 dir('02_expressWeb') {
                     echo 'Installing dependencies...'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 dir('02_expressWeb') {
                     echo 'Running lint...'
-                    sh 'npm run lint || true'
+                    bat 'npm run lint || true'
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
         stage('Start App') {
             steps {
                 dir('02_expressWeb') {
-                    sh 'npm start &'
+                    bat 'npm start &'
                 }
             }
         }
