@@ -55,7 +55,13 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploy stage (yet to script)...'
+                echo 'Deploying container...'
+                script {
+                    // Stop any old container
+                    bat 'docker stop expresswebapp || exit 0'
+                    bat 'docker rm expresswebapp || exit 0'
+                    bat "docker run -d -p 3000:3000 --name expresswebapp %IMAGE_NAME%:%IMAGE_TAG%"
+                }
             }
         }
     }
